@@ -518,9 +518,7 @@ class DefaultViewManager {
 			return this.append(next, forceRight)
 				.then(function(){
 					return this.handleNextPrePaginated(forceRight, next, this.append);
-				}.bind(this), (err) => {
-					return err;
-				})
+				}.bind(this))
 				.then(function(){
 
 					// Reset position to start for scrolled-doc vertical-rl in default mode
@@ -617,9 +615,7 @@ class DefaultViewManager {
 							return this.prepend(left);
 						}
 					}
-				}.bind(this), (err) => {
-					return err;
-				})
+				}.bind(this))
 				.then(function(){
 					if(this.isPaginated && this.settings.axis === "horizontal") {
 						if (this.settings.direction === "rtl") {
